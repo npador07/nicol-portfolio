@@ -1,0 +1,156 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.page-wrap{
+    min-height: 100%;
+    box-sizing: border-box;
+    border: 4px solid gold;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    min-height: 100vh;
+    
+}
+
+section{
+    flex-wrap:wrap;
+    justify-content: center;   
+    gap: 20px;
+    padding: 4px;
+}
+.header{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+#header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; }
+
+.header-text {
+  display: flex;
+  flex-direction: column;  
+}
+#profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+h1{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-top: 0px;
+}
+.header p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: -6px;
+}
+.projects h1{
+text-align: center;
+margin-bottom: -5px;
+    }
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background: whitesmoke;
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}    
+.about-me{
+    background-color: whitesmoke;   
+    padding-top: 5px; 
+    padding-bottom: 30px;
+}
+.about-me h1{
+    text-align: center;
+}
+.about-me p{
+    margin-top: -10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
+.skills{
+    text-align: center;
+    filter: grayscale(100%);
+    color: #000;
+    padding-top: 5px;
+}
+.skills h1{
+    margin-bottom: 5px;
+}
+
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.skills-list p{
+    display:flex;
+    align-items: center;
+}
+ 
+
+.contact{
+    padding-top: 5px;
+    text-align: center;
+    background-color: whitesmoke;
+    flex-direction: column;
+    gap: 0px;
+    filter: grayscale(100%);
+    color: #000;
+    }
+.contact p{
+    margin-top: -5px;  
+}
+.contact a{
+    text-decoration: none;
+}
+
+#header-div{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.header-btn{
+    text-decoration: none;
+    color: rgb(84, 48, 48);
+    justify-content: center;
+    
+}
+.header-btn:hover{
+    color: inherit;
+    text-decoration: underline;
+}
+
+i{
+    font-size: 1.3em;
+}
