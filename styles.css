@@ -120,6 +120,15 @@ summary {
   font-weight: bold;
   border-radius: 10px;
 }    
+.grid-item a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+
+.grid-item p{
+    font-size: smaller;
+}
 .about-me{
     background-color: whitesmoke;   
     padding-top: 5px; 
