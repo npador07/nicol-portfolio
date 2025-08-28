@@ -1,5 +1,5 @@
 const owner = 'npador07';
-const repo = 'nicol-portfolio';
+const repo = 'nicol-porfolio';
 const getProjectsUrl = `https://api.github.com/repos/${owner}/${repo}/contents/projects`;
 
 async function fetchProjects() {
