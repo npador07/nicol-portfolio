@@ -26,7 +26,6 @@ async function fetchProjects() {
 const gridClick = document.querySelectorAll(".grid-item");
 
 gridClick.forEach(gridClick => {
-    gridClick.innerHTML = `<p>hahahahahaha</p>`
     gridClick.addEventListener("click", ()=> {
        console.log(fetchProjects());
     });
