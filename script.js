@@ -1,26 +1,36 @@
 const owner = 'npador07';
 const repo = 'nicol-porfolio';
-const getProjectsUrl = `https://api.github.com/repos/${owner}/${repo}/contents/projects`;
+const getProjectsUrl = `https://api.github.com/repos/${owner}/${repo}/contents/`;
 
-async function fetchProjects() {
+async function fetchProjects(path = "projects") {
+  let results = [];
   try {
-    const response = await fetch(getProjectsUrl);
+    const response = await fetch(`${getProjectsUrl}${path}`);
     
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
 
     const data = await response.json();
-    console.log(data); // this will list the files/folders inside /projects
-
-    // Example: log only file names
-    data.forEach(item => {
-      console.log(item.name, item.type, item.download_url);
-    });
+    for (const item of data) {
+      if (item.type === "dir") {
+       const subResults = await fetchProjects(item.path);
+       if (Array.isArray(subResults)){
+       results = results.concat(subResults);
+       }
+      } else if (item.name.toLowerCase() === "index.html") {
+        // 📄 Found an index.html
+        results.push(item.path);
+      }
+    }
 
   } catch (error) {
     console.error('Fetch failed:', error);
+    
   }
+  
+  return console.log(results);
+    
 }
 
 const gridClick = document.querySelectorAll(".grid-item");
@@ -38,8 +48,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Simple email regex
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Simple email regex for .com validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
 
   if (name === "") {
     alert("Please enter your name.");
@@ -47,7 +57,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   }
 
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
+    alert("Please enter a valid email address that ends with .com");
     return;
   }
 
