@@ -30,3 +30,34 @@ gridClick.forEach(gridClick => {
        console.log(fetchProjects());
     });
 }  );
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop form from auto-submitting
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Simple email regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (message === "") {
+    alert("Please enter a message.");
+    return;
+  }
+
+  // ✅ Passed validation → submit form
+  alert("Form submitted successfully!");
+  event.target.submit();
+});
+

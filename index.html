@@ -114,20 +114,20 @@
         </section>
         <section id="contact" class="contact">
               <h1>Contact</h1>
-            
-            <p>
-                <i class="fa-solid fa-phone"></i> 
-                <strong>+63 995 200 2372</strong>
-            </p>
-            <p>
-                <i class="fa-solid fa-envelope"></i> 
-                <strong>npador07@gmail.com</strong>
-            </p>
-            <p>
-                <a href="https://www.facebook.com/nicol.pador/" target="_blank">
-                <i class="fa-brands fa-facebook"></i> Nicol Pador
-                </a>
-            </p>
+            <h1>Contact Me</h1>
+              <form id="contactForm "action="mailto:npador07@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+        
         </section>
         </div>
         <script src="script.js"></script>
