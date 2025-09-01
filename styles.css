@@ -233,3 +233,63 @@ summary {
 .contact button:hover {
   background: red;
 }
+
+/* 🌙 Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .header,
+body.dark .about-me,
+body.dark .skills,
+body.dark .contact,
+body.dark .grid-item {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+body.dark .grid-item a {
+  color: #e0e0e0;
+}
+
+body.dark .contact form {
+  background: #222;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+body.dark .header-btn{
+    color: #e0e0e0;
+ 
+}
+body.dark .header-btn:hover{
+    color: blue;
+
+}
+body.dark .contact input,
+body.dark .contact textarea {
+  background: #e0e0e0;
+  color: #333;
+  border: 1px solid #555;
+}
+
+body.dark .contact button {
+  background: #e0e0e0;
+  color: #121212;
+}
+
+body.dark .contact button:hover {
+  background: blue;
+  color: white;
+}
+body.dark .contact label {
+  color: #e0e0e0;
+}
+body.dark details {
+  background: #1e1e1e;
+  border-color: #333;
+}
+body.dark .skills{
+  background: #121212
+}
