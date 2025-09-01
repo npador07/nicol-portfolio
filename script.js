@@ -3,11 +3,8 @@ const repo = 'nicol-porfolio';
 const getProjectsUrl = `https://api.github.com/repos/${owner}/${repo}/contents/`;
 const gridContainerHTML = document.getElementById('grid-container-HTML');
 const gridContainerJS = document.getElementById('grid-container-javascript');
-const summaryLabelHTML = document.getElementById('summaryLabelHTML');
-const summaryLabelJS = document.getElementById('summaryLabelJSCRIPT');
 
-const htmlLabel = summaryLabelHTML.textContent;
-const jsLabel = summaryLabelJS.textContent;
+
 
 async function fetchProjects(path = `projects`) {
   let results = [];
@@ -28,6 +25,7 @@ async function fetchProjects(path = `projects`) {
       } else if (item.name.toLowerCase() === "index.html") {
         
         results.push(item.path);
+        
       }
     }
 
