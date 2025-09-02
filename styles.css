@@ -234,7 +234,7 @@ summary {
   background: red;
 }
 
-/* 🌙 Dark Theme */
+/*Dark Mode*/
 body.dark {
   background-color: #121212;
   color: #e0e0e0;
@@ -293,3 +293,30 @@ body.dark details {
 body.dark .skills{
   background: #121212
 }
+.theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      z-index: 9999;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    body.dark .theme-toggle {
+      background: #333;
+      color: #f5f5f5;
+    }

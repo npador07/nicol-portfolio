@@ -130,7 +130,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
 
 
-const toggleBtn = document.getElementById("theme-toggle");
+const darkModeBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
 // Load saved theme
@@ -140,7 +140,7 @@ if (savedTheme === "dark") {
 }
 
 // Toggle theme
-toggleBtn.addEventListener("click", () => {
+darkModeBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
 
   if (body.classList.contains("dark")) {
