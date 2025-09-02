@@ -6,5 +6,6 @@ Stack: HTML , CSS , JavaScript
 
 Run locally by loading index.html file into any web browser
 
-deployment link:
+deployment link: 
+https://npador07.github.io/nicol-porfolio/
 

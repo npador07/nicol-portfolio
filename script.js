@@ -33,16 +33,14 @@ async function fetchProjects(path = `projects`) {
     console.error('Fetch failed:', error);
     
   }
-  //filter to make return only 1
-  // add code so that it will load all projects upon loading the page
-  // still trying to figure it out
+ 
   return results;
    
 }
 window.onload = async function () {
   const allProjects = await fetchProjects();  // get all index.html file paths
   console.log(allProjects);
-
+//what mooooore 
   // Clear existing grid content
   gridContainerHTML.innerHTML = "";
   gridContainerJS.innerHTML = "";
