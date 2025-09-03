@@ -48,7 +48,7 @@ window.onload = async function () {
   for (const projectPath of allProjects) {
     const parts = projectPath.split("/"); 
     const projectName = parts[parts.length - 2];   
-    const projectLink = `https://npador07.github.io/nicol-porfolio/${projectPath}`;
+    const projectLink = `https://npador07.github.io/nicol-portfolio/${projectPath}`;
 
     // Fetch the index.html file to extract description
     let description = "";
