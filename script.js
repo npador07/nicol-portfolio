@@ -1,5 +1,5 @@
 const owner = 'npador07';
-const repo = 'nicol-porfolio';
+const repo = 'nicol-portfolio';
 const getProjectsUrl = `https://api.github.com/repos/${owner}/${repo}/contents/`;
 const gridContainerHTML = document.getElementById('grid-container-HTML');
 const gridContainerJS = document.getElementById('grid-container-javascript');
