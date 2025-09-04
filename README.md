@@ -1,4 +1,4 @@
-# nicol-porfolio
+# nicol-portfolio
 Portfolio Page
 
 Project purpose: Output by Nicol for Ken
