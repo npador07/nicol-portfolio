@@ -119,12 +119,19 @@ summary {
   text-align: center;
   font-weight: bold;
   border-radius: 10px;
+  text-decoration: none;
+  color: black
 }    
-.grid-item a{
-    text-decoration: none;
-    color: black;
+.grid-item h3{
     font-size: larger;
 }
+
+.grid-item:visited,.grid-item:hover,.grid-item:active{
+    text-decoration: none;
+    color: black;
+
+}
+
 
 .grid-item p{
     font-size: smaller;

@@ -40,7 +40,7 @@ async function fetchProjects(path = `projects`) {
 window.onload = async function () {
   const allProjects = await fetchProjects();  // get all index.html file paths
   console.log(allProjects);
-//what mooooore 
+
   // Clear existing grid content
   gridContainerHTML.innerHTML = "";
   gridContainerJS.innerHTML = "";
@@ -68,10 +68,11 @@ window.onload = async function () {
     }
 
     // Build grid item
-    const gridItem = document.createElement("div");
+    const gridItem = document.createElement("a");
+    gridItem.href = projectLink;
     gridItem.className = "grid-item";
     gridItem.innerHTML = `
-      <a href="${projectLink}" target="_blank">${projectName}</a>
+      <h3>${projectName}</h3>
       <p>${description}</p>
     `;
 
