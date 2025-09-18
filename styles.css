@@ -9,10 +9,26 @@ html, body {
     border: 4px solid lightgrey;
    
 }
+.container{
+    max-width: 1200px;
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
 h1{
     font-family:'Courier New', Courier, monospace;
     font-size: 30px;
     margin-top: 0px;
+}
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem; /* ~28px if base is 16px */
+  font-weight: 600;   /* medium-bold for emphasis */
+  line-height: 1.3;   /* keeps spacing clean */
+  margin-bottom: 1rem; /* adds breathing room */
+  color: #222; /* dark gray for better readability than pure black */
+  text-align: center;
 }
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +43,7 @@ section{
     padding: 4px;
 }
 i{
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 .header{
     background-color: whitesmoke;
@@ -46,8 +62,8 @@ i{
   flex-direction: column;  
 }
 #profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -57,8 +73,9 @@ i{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 60px;
     flex-wrap: wrap;
+    padding-top: 60px;
 }
 .header-btn{
     text-decoration: none;
@@ -76,10 +93,9 @@ i{
     margin-top: -6px;
 }
 
-.projects h1{
-text-align: center;
-margin-bottom: -5px;
-    }
+.projects h2{
+    margin-top: -10px;
+}
 details {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
@@ -120,7 +136,7 @@ summary {
   font-weight: bold;
   border-radius: 10px;
   text-decoration: none;
-  color: black
+  color: #222
 }    
 .grid-item h3{
     font-size: larger;
@@ -128,7 +144,7 @@ summary {
 
 .grid-item:visited,.grid-item:hover,.grid-item:active{
     text-decoration: none;
-    color: black;
+    color: #222;
 
 }
 
@@ -138,11 +154,10 @@ summary {
 }
 .about-me{
     background-color: whitesmoke;   
-    padding-top: 5px; 
-    padding-bottom: 30px;
+    
 }
-.about-me h1{
-    text-align: center;
+.about-me h2{
+    margin-top: -10px;
 }
 .about-me p{
     margin-top: -10px;
@@ -154,38 +169,47 @@ summary {
 .skills{
     text-align: center;
     filter: grayscale(100%);
-    color: #000;
-    padding-top: 5px;
+    color: #222;
 }
-.skills h1{
-    margin-bottom: 5px;
+.skills h2{
+    margin-top: 15px;
 }
+
+
 
 .skills-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding-top: 10px;
+    padding-top: 45px;
 }
 
-.skills-list p{
-    display:flex;
-    align-items: center;
+.skills-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
+
+.skills-list li {
+  display: flex; /* only for aligning icon + text inside */
+  align-items: center;
+  }
  
 
 .contact {
-  padding: 40px 20px;
   background-color: whitesmoke;
   text-align: center;
+  
+}
+.contact h2{
+    margin-top: -10px;
 }
 
-.contact h1 {
-  margin-top: -15px;
-  font-size: 28px;
-  font-weight: bold;
-}
 
 .contact form {
   width: 100%;
@@ -203,7 +227,7 @@ summary {
   margin-bottom: 6px;
   font-weight: 600;
   font-size: 14px;
-  color: #333;
+  color: #222;
 }
 
 .contact input,
@@ -261,6 +285,9 @@ body.dark .grid-item a {
   color: #e0e0e0;
 }
 
+body.dark h2{
+  color: #e0e0e0
+}
 body.dark .contact form {
   background: #222;
   color: #e0e0e0;
